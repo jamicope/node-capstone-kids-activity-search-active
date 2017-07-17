@@ -1,25 +1,26 @@
 # node-capstone-kids-activity-search-active
 Thinkful node capstone for a kids' activity search based on an Active API
 
-##Background
+## Background
 
 I built this app to help parents have one source to find different types of local activities for children in their area, and be able to combine them in one place to make scheduling easier.
 
-##Use Case
+## Use Case
 
 This app gives parents acces to 9 different activities, ranging from outdoors to dance, within a 50-mile radius of a chosen city in the US.
 
 
-##Initial UX
+## Initial UX
 
 The initial wirframe can be seen below:
+
 https://jamicope.github.io/node-capstone-kids-activity-search-active/public/FullSizeRender (3).jpg
 
-##Working Prototype
+## Working Prototype
 
 You can access a working prototype of the app here: https://capstone-kids-activity-search.herokuapp.com/
 
-##Functionality
+## Functionality
 
 The app's functionality includes:
 
@@ -31,7 +32,7 @@ Search for children's activities, based on user preference of activity & city.
 * User can remove events from "My Planner"
 * Link to the event website, if available
 
-##Development Roadmap
+## Development Roadmap
 
 This is v1.0 of the app, but future enhancements are expected to include:
 
