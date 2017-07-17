@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+main div.row {
+    max-width: 1000px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+}
+
+main div.row::before,
+.row::after {
+    display: table;
+}
+
+main div.row::after {
+    clear: both;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    float: left;
+    margin-top: 10px;
+    margin-left: 1.04166666%;
+    margin-right: 1.04166666%;
+    width: 100%;
+}
+
+
+/* Non-mobile, grid */
+
+@media only screen and (min-width: 640px) {
+    /* 12 columns */
+    .col-12 {
+        width: 100%;
+    }
+    .col-8 {
+        width: 65%;
+    }
+    /* 4 columns */
+    .col-4 {
+        width: 31%;
+    }
+    .col-4 p {
+        font-size: 13px;
+    }
+}

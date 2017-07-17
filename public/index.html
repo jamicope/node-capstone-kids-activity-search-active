@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Local Activities for Kids</title>
+    <link rel="stylesheet" href="float-grid.css" type="text/css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="row">
+            <div class="col-12 orange">
+                <h1>Local Activities for Kids</h1>
+            </div>
+        </div>
+    </header>
+    <section id="userInput" class="user-input">
+        <form id="criteria" class="search-criteria">
+
+            <div class="row">
+                <div class="col-4 column">
+                    <input type="radio" name="activity" value="team sports"> Team Sports
+                    <br>
+                    <input type="radio" name="activity" value="individual sports"> Individual Sports
+                    <br>
+                    <input type="radio" name="activity" value="youth camps"> Youth Camps
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 column">
+                    <input type="radio" name="activity" value="parks & recreation"> Parks/ Recreation
+                    <br>
+                    <input type="radio" name="activity" value="cheer and dance"> Cheer/ Dance
+                    <br>
+                    <input type="radio" name="activity" value="martial arts"> Martial Arts
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 column">
+                    <input type="radio" name="activity" value="music"> Music
+                    <br>
+                    <input type="radio" name="activity" value="classes"> Classes
+                    <br>
+                    <input type="radio" name="activity" value="outdoor adventure"> Outdoor Adventure
+                </div>
+            </div>
+            <br>
+            <input type="text" name="cityState" id="cityState" placeholder=" Enter your City, State--> ex.: Denver, CO">
+            <button class="reset" onClick="window.location.reload()">Reset Form</button>
+            <button id="submit" onClick="" class="reset">Search</button>
+        </form>
+    </section>
+    <section class="results">
+        <div class="row">
+            <div class="col-4  results-field">
+                <p>My Planner</p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="col-8 results-field">
+                <p>Search Results</p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="info">
+        <div class="row">
+            <div class="col-12 blue">
+                <h6>Created by Jami Cope</h6>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="client.js"></script>
+
+</body>
+
+</html>

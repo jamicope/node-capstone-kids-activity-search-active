@@ -1,0 +1,79 @@
+* {
+    border: 0;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: 1px solid grey;*/
+}
+
+html {
+    font-family: karla;
+    background-image: image(images/kids-on-bikes.jpeg) fill;
+}
+
+ul {
+    list-style: none;
+}
+
+header div {
+    text-align: center;
+    opacity: .75;
+    width: 100%;
+    font-size: 28px;
+    margin: 1rem auto;
+    padding: 1rem;
+    line-height: 1.5;
+}
+
+section.user-input {
+    font-size: 16px;
+    border-radius: 7px;
+    border: .5px solid grey;
+    background-color: white;
+    line-height: 2;
+    width: 65%;
+    box-shadow: 5px 5px 5px #888888;
+    text-align: center;
+    margin-top: .5rem;
+}
+
+form div.column {
+    text-align: left;
+    padding: 1rem 2rem;
+    width: 25%;
+}
+
+form input#cityState {
+    width: 50%;
+    height: 2.5rem;
+    font-size: 16px;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 1rem;
+}
+
+button {
+    width: 10%;
+    height: 2.5rem;
+    border: 1px solid grey;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 1rem auto;
+    margin: 1rem auto;
+}
+
+.results {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.results-field {
+    border-radius: 3px;
+    border: .5px solid grey;
+    background-color: white;
+    margin: 1rem .5rem;
+    padding: .5rem 1rem;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 5px 5px 5px #888888;
+}
