@@ -12,9 +12,9 @@ This app gives parents acces to 9 different activities, ranging from outdoors to
 
 ## Initial UX
 
-The initial wirframe can be seen below:
+The initial wireframe can be seen below:
 
-![Initial Wireframe](https://jamicope.github.io/node-capstone-kids-activity-search-active/wireframe-node-capstone.jpg)
+![Initial Wireframe](https://https://github.com/jamicope/node-capstone-kids-activity-search-active/blob/master/wireframe-node-capstone.jpg)
 
 ## Working Prototype
 
