@@ -151,10 +151,10 @@ button:hover {
 }
 
 .planner-field p.vertical-text {
-    transform: rotate(90deg);
+    transform: rotate(270deg);
     transform-origin: left top 1px;
     float: left;
-    display: block;
+    padding: 0;
 }
 
 .auto-populated-description {
@@ -218,7 +218,7 @@ footer {
     text-align: center;
     font-size: 14px;
     box-shadow: 5px 5px 5px #888888;
-    display: inline-block;
+    /*    display: inline-block;*/
     position: fixed;
     right: -160px;
     top: 105px;
@@ -228,6 +228,6 @@ footer {
 }
 
 .planner-field:hover {
-    right: 1px;
+    right: -2px;
     padding: 1rem;
 }
