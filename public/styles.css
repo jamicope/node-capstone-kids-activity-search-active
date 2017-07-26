@@ -8,72 +8,226 @@
 
 html {
     font-family: karla;
-    background-image: image(images/kids-on-bikes.jpeg) fill;
+    background: rgba(0, 0, 0, 0) url("../images/kids-outdoors.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#container {
+    min-height: 100%;
+    position: relative;
+}
+
+#header {
+    padding: 10px;
+}
+
+#body {
+    padding: 10px;
+    padding-bottom: 40px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
 }
 
 ul {
     list-style: none;
 }
 
-header div {
-    text-align: center;
-    opacity: .75;
+li {
+    background-color: lightskyblue;
+    margin: 0.5%;
+    padding: 0.5%;
+    border-radius: 7px;
+    display: inline-block;
+    position: relative;
+}
+
+li.activities {
+    width: 45%;
+    vertical-align: top;
+}
+
+li.planner {
     width: 100%;
-    font-size: 28px;
-    margin: 1rem auto;
-    padding: 1rem;
-    line-height: 1.5;
+    padding-top: 1rem;
+    margin-top: .5rem;
+    vertical-align: top;
+}
+
+header {
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 75px;
+}
+
+header h1 {
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 48px;
 }
 
 section.user-input {
     font-size: 16px;
     border-radius: 7px;
-    border: .5px solid grey;
+    border: 0.5px solid grey;
     background-color: white;
     line-height: 2;
-    width: 65%;
     box-shadow: 5px 5px 5px #888888;
     text-align: center;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
 }
 
 form div.column {
     text-align: left;
-    padding: 1rem 2rem;
-    width: 25%;
+    padding: 0.5rem 0.75rem;
 }
 
-form input#cityState {
+form input#cityState,
+form select#activity {
     width: 50%;
+    display: block;
     height: 2.5rem;
-    font-size: 16px;
+    font-size: 14px;
     border: 1px solid grey;
     border-radius: 3px;
     padding: 1rem;
 }
 
+form input#cityState {
+    margin-top: 1rem;
+}
+
 button {
-    width: 10%;
+    width: 25%;
     height: 2.5rem;
     border: 1px solid grey;
     border-radius: 3px;
-    font-size: 14px;
+    font-size: 16px;
     padding: 1rem auto;
     margin: 1rem auto;
 }
 
-.results {
-    margin: 0 auto;
-    width: 90%;
+button:hover {
+    background-color: skyblue;
 }
 
 .results-field {
-    border-radius: 3px;
-    border: .5px solid grey;
+    border-radius: 7px;
+    border: 0.5px solid grey;
     background-color: white;
-    margin: 1rem .5rem;
-    padding: .5rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
     text-align: center;
     font-size: 14px;
     box-shadow: 5px 5px 5px #888888;
+    /*    display: none;
+    */
+}
+
+.display-results,
+.planner-results {
+    background-color: white;
+    margin: 0.5%;
+    padding: 0.5%;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.planner-field p.vertical-text {
+    transform: rotate(90deg);
+    transform-origin: left top 1px;
+    float: left;
+    display: block;
+}
+
+.auto-populated-description {
+    height: 100px;
+    overflow-x: auto;
+}
+
+a {
+    color: whitesmoke;
+    text-shadow: 0.5px 0.5px black;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.activity-description h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: azure;
+}
+
+.activity-description p.city {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.activity-description p.date {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.addToPlannerButton,
+.deleteFromPlannerButton {
+    position: absolute;
+    top: -24px;
+    right: -6px;
+    width: 20px;
+    border-radius: 29px;
+}
+
+.addToPlannerButton,
+.deleteFromPlannerButton,
+img {
+    height: 21px;
+    text-align: right;
+    background: transparent;
+}
+
+footer {
+    display: block;
+    padding: 5rem 0.5rem;
+    vertical-align: bottom;
+}
+
+.planner-field {
+    border-radius: 7px;
+    border: 0.5px solid grey;
+    background-color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 3rem;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 5px 5px 5px #888888;
+    display: inline-block;
+    position: fixed;
+    right: -160px;
+    top: 105px;
+    width: 200px;
+    height: 200px;
+    overflow-x: auto;
+}
+
+.planner-field:hover {
+    right: 1px;
+    padding: 1rem;
 }

@@ -11,13 +11,13 @@ app.use(bodyParser.json());
 
 
 
-var runServer = function(callback) {
-    mongoose.connect(config.DATABASE_URL, function(err) {
+var runServer = function (callback) {
+    mongoose.connect(config.DATABASE_URL, function (err) {
         if (err && callback) {
             return callback(err);
         }
 
-        app.listen(config.PORT, function() {
+        app.listen(config.PORT, function () {
             console.log('Listening on localhost:' + config.PORT);
             if (callback) {
                 callback();
@@ -27,7 +27,7 @@ var runServer = function(callback) {
 };
 
 if (require.main === module) {
-    runServer(function(err) {
+    runServer(function (err) {
         if (err) {
             console.error(err);
         }
@@ -35,22 +35,24 @@ if (require.main === module) {
 };
 
 // external API call
-var getFromActive = function(searchTerm) {
+var getFromActive = function (searchTerm) {
     var emitter = new events.EventEmitter();
-    //console.log("inside getFromActive function");
-    unirest.get("http://api.amp.active.com/v2/search?topicName=Running&registerable_only=true&category=races&attributeValue=5k&sort=date_asc&per_page=24&near="+searchTerm+",US&radius=50&api_key=2e4ra5w6b9augfrn54vjb4bx")
+
+    //    unirest.get("http: //api.amp.active.com/v2/search?topicName=Running&registerable_only=true&category=races&attributeValue=5k&sort=date_asc&per_page=24&near=" + searchTerm + ",US&radius=50&api_key=2e4ra5w6b9augfrn54vjb4bx")
+    unirest.get("http://api.amp.active.com/v2/search?&sort=date_asc&per_page=24&near=" + searchTerm + ",US&radius=50&kids=true&api_key=5jrdrb46x89e42e4vk94pgcv")
+        //    unirest.get("http://api.amp.active.com/v2/search?kids=true&api_key=5jrdrb46x89e42e4vk94pgcv")
         .header("Accept", "application/json")
-        .end(function(result) {
-        //console.log(result.status, result.headers, result.body);
-        //success scenario
-        if (result.ok) {
-            emitter.emit('end', result.body);
-        }
-        //failure scenario
-        else {
-            emitter.emit('error', result.code);
-        }
-    });
+        .end(function (result) {
+            console.log(result);
+            //success scenario
+            if (result.ok) {
+                emitter.emit('end', result.body);
+            }
+            //failure scenario
+            else {
+                emitter.emit('error', result.code);
+            }
+        });
 
     return emitter;
 };
@@ -77,7 +79,7 @@ app.get('/activity/:name', function (req, res) {
 
 
 
-app.post('/add-to-favorites', function (req, res) {
+app.post('/add-to-planner', function (req, res) {
 
     //db connection and data queries
     activity.create({
@@ -95,9 +97,9 @@ app.post('/add-to-favorites', function (req, res) {
     });
 });
 
-app.get('/populate-favorites', function (req, res) {
+app.get('/populate-planner', function (req, res) {
     activity.find(function (err, item) {
-        console.log(item);
+        //        console.log(item);
         if (err) {
             return res.status(500).json({
                 message: 'Internal Server Error'
@@ -107,8 +109,8 @@ app.get('/populate-favorites', function (req, res) {
     });
 });
 
-app.delete('/delete-favorites/:favoritesId', function(req, res) {
-    activity.findByIdAndRemove(req.params.favoritesId, function(err, items) {
+app.delete('/delete-planner/:plannerId', function (req, res) {
+    activity.findByIdAndRemove(req.params.plannerId, function (err, items) {
         if (err)
             return res.status(404).json({
                 message: 'Item not found.'

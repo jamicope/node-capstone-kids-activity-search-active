@@ -9,89 +9,72 @@
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
 </head>
 
+
 <body>
-
-    <header>
-        <div class="row">
-            <div class="col-12 orange">
-                <h1>Local Activities for Kids</h1>
-            </div>
+    <div id="container">
+        <div id="header">
+            <header>
+                <div class="row">
+                    <div class="col-12 orange">
+                        <h1>Local Activities for Kids</h1>
+                    </div>
+                </div>
+            </header>
         </div>
-    </header>
-    <section id="userInput" class="user-input">
-        <form id="criteria" class="search-criteria">
+        <div id="body" class="row">
+            <section id="userInput" class="user-input col-12">
+                <form id="criteria" class="search-criteria">
+                    <h2>Select the type of activity you are looking for:</h2>
 
-            <div class="row">
-                <div class="col-4 column">
-                    <input type="radio" name="activity" value="team sports"> Team Sports
-                    <br>
-                    <input type="radio" name="activity" value="individual sports"> Individual Sports
-                    <br>
-                    <input type="radio" name="activity" value="youth camps"> Youth Camps
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4 column">
-                    <input type="radio" name="activity" value="parks & recreation"> Parks/ Recreation
-                    <br>
-                    <input type="radio" name="activity" value="cheer and dance"> Cheer/ Dance
-                    <br>
-                    <input type="radio" name="activity" value="martial arts"> Martial Arts
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4 column">
-                    <input type="radio" name="activity" value="music"> Music
-                    <br>
-                    <input type="radio" name="activity" value="classes"> Classes
-                    <br>
-                    <input type="radio" name="activity" value="outdoor adventure"> Outdoor Adventure
-                </div>
-            </div>
-            <br>
-            <input type="text" name="cityState" id="cityState" placeholder=" Enter your City, State--> ex.: Denver, CO">
-            <button class="reset" onClick="window.location.reload()">Reset Form</button>
-            <button id="submit" onClick="" class="reset">Search</button>
-        </form>
-    </section>
-    <section class="results">
-        <div class="row">
-            <div class="col-4  results-field">
-                <p>My Planner</p>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-            <div class="col-8 results-field">
+                    <select name="activity" id="activity">
+                       <option value="" >Select an Activity</option>
+                        <option value="Team Sports" selected="selected">Team Sports</option>
+                       <option value="Individual Sports">Individual Sports</option>
+                       <option value="Youth Camps">Youth Camps</option>
+                       <option value="Parks/ Recreation">Parks/ Recreation</option>
+                       <option value="Cheer/ Dance">Cheer/ Dance</option>
+                       <option value="Martial Arts">Martial Arts</option>
+                       <option value="Music">Music</option>
+                       <option value="Classes">Classes</option>
+                       <option value="Outdoor Adventure">Outdoor Adventure</option>
+                   </select>
+
+                    <input type="text" name="cityState" id="cityState" placeholder=" Enter your City, State--> ex.: Denver, CO" value="denver, CO">
+                    <button class="reset" onClick="window.location.reload()">Reset Form</button>
+                    <button id="submit" onClick="" class="reset">Search</button>
+                </form>
+            </section>
+            <section class="results col-12 results-field">
                 <p>Search Results</p>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                <ul class="display-results">
                 </ul>
-            </div>
+            </section>
         </div>
-    </section>
+        <div class="planner-field">
+            <p class="vertical-text">My Planner</p>
+            <ul class="planner-results" id="plannerResults">
 
-    <footer class="info">
-        <div class="row">
-            <div class="col-12 blue">
+            </ul>
+        </div>
+        <div id="footer">
+            <footer class="info">
+                <!--
+                <div class="row">
+
+                    <div class="col-12 blue">
+-->
                 <h6>Created by Jami Cope</h6>
-            </div>
+                <!--
+</div>
+</div>
+-->
+            </footer>
         </div>
-    </footer>
-
+    </div>
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="client.js"></script>
 
 </body>
+
 
 </html>
