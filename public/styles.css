@@ -221,7 +221,13 @@ a {
     top: -24px;
     right: -6px;
     width: 20px;
-    border-radius: 29px;
+    border: none;
+}
+
+.addToPlannerButton,
+.deleteFromPlannerButton:active {
+    border: none;
+    outline: none;
 }
 
 .addToPlannerButton,
