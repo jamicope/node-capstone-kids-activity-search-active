@@ -8,7 +8,7 @@
 
 html {
     font-family: karla;
-    background: rgba(0, 0, 0, 0) url("../images/kids-outdoors.jpg") no-repeat center center fixed;
+    background: rgba(0, 0, 0, 0) url("../images/kids-biking-outdoors.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -78,8 +78,10 @@ header {
 header h1 {
     display: block;
     text-align: center;
+    text-shadow: 2px 2px 4px white;
     padding: 0.5rem;
-    font-size: 48px;
+    font-size: 64px;
+    font-weight: 1600;
 }
 
 section.user-input {
@@ -147,14 +149,42 @@ button:hover {
     margin: 0.5%;
     padding: 0.5%;
     border-radius: 5px;
-    display: inline-block;
+}
+
+.planner-field {
+    border-radius: 7px;
+    border: 0.5px solid grey;
+    background-color: black;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 3rem;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 5px 5px 5px #888888;
+    position: fixed;
+    right: -160px;
+    top: 105px;
+    width: 200px;
+    height: 400px;
+    overflow-x: auto;
+}
+
+.planner-field:hover {
+    right: -2px;
+    padding: 1rem;
 }
 
 .planner-field p.vertical-text {
-    transform: rotate(270deg);
+    transform: rotate(90deg);
     transform-origin: left top 1px;
     float: left;
-    padding: 0;
+    position: absolute;
+    left: 25px;
+    top: 65px;
+}
+
+.planner-field:hover p.vertical-text {
+    display: none
 }
 
 .auto-populated-description {

@@ -4,25 +4,27 @@
 $("#criteria").submit(function (event) {
     //if the page refreshes when you submit the form use "preventDefault()" to force JavaScript to handle the form submission
     event.preventDefault();
-    var userAnswer = $("#activity").val();
-    var userInput = $("#cityState").val();
+    var userActivity = $("#activity").val();
+    var userState = $("#cityState").val();
+    console.log(userActivity);
+    console.log(userState);
 
-    if (userInput === "") {
+    if (userState === "") {
         alert("Sorry that search did not yeild any results. Please enter a city and state and try your search again.");
-    } else if (userAnswer === "") {
+    } else if (userActivity === "") {
         alert("Please select an activity")
     } else {
         // console.log(userInput);
-        ajaxSearch(userInput);
+        ajaxSearch(userActivity, userState);
     }
 
 });
 
 //use that value from above to make the GET call below
-function ajaxSearch(searchTerm) {
+function ajaxSearch(activity, state) {
     $.ajax({
             type: 'GET',
-            url: '/activity/' + searchTerm,
+            url: '/activity/' + activity + '/' + state,
             dataType: 'json',
         })
         .done(function (dataResults) {
