@@ -238,15 +238,12 @@ a {
     right: -6px;
     width: 20px;
     border: none;
-<<<<<<< HEAD
-=======
 }
 
 .addToPlannerButton,
 .deleteFromPlannerButton:active {
     border: none;
     outline: none;
->>>>>>> origin/master
 }
 
 .addToPlannerButton,
@@ -273,7 +270,6 @@ footer {
     text-align: center;
     font-size: 14px;
     box-shadow: 5px 5px 5px #888888;
-    /*    display: inline-block;*/
     position: fixed;
     right: -160px;
     top: 105px;
