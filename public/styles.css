@@ -7,7 +7,7 @@
 }
 
 html {
-    font-family: karla;
+    font-family: "Karla", Arial, sans-serif;
     background: rgba(0, 0, 0, 0) url("../images/kids-biking-outdoors.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -129,6 +129,10 @@ button:hover {
     background-color: skyblue;
 }
 
+button:active {
+    border: 0;
+}
+
 .results-field {
     border-radius: 7px;
     border: 0.5px solid grey;
@@ -139,8 +143,6 @@ button:hover {
     text-align: center;
     font-size: 14px;
     box-shadow: 5px 5px 5px #888888;
-    /*    display: none;
-    */
 }
 
 .display-results,
@@ -192,6 +194,20 @@ button:hover {
     overflow-x: auto;
 }
 
+.auto-populated-description span,
+.auto-populated-description a,
+.auto-populated-description p {
+    line-height: normal !important;
+    font-family: "Karla", Arial, sans-serif !important;
+    font-size: 100% !important;
+    background-color: transparent !important;
+    color: black !important;
+}
+
+.auto-populated-description span font {
+    color: black !important;
+}
+
 a {
     color: whitesmoke;
     text-shadow: 0.5px 0.5px black;
@@ -221,7 +237,7 @@ a {
     top: -24px;
     right: -6px;
     width: 20px;
-    border-radius: 29px;
+    border: none;
 }
 
 .addToPlannerButton,

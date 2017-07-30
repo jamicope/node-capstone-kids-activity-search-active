@@ -10,7 +10,7 @@ $("#criteria").submit(function (event) {
     console.log(userState);
 
     if (userState === "") {
-        alert("Sorry that search did not yeild any results. Please enter a city and state and try your search again.");
+        alert("Sorry that search did not yield any results. Please enter a city and state and try your search again.");
     } else if (userActivity === "") {
         alert("Please select an activity")
     } else {
@@ -29,7 +29,11 @@ function ajaxSearch(activity, state) {
         })
         .done(function (dataResults) {
             console.log(dataResults);
-            displaySearchData(dataResults.results);
+            if (dataResults.total_results == 0) {
+                alert("No results found!");
+            } else {
+                displaySearchData(dataResults.results);
+            }
         })
         .fail(function (jqXHR, error, errorThrown) {
             console.log(jqXHR);
@@ -88,7 +92,7 @@ function displaySearchData(dataMatches) {
         buildTheHtmlOutput += '</div>';
         buildTheHtmlOutput += '</li>';
     });
-
+    $('.results-field').show();
     $(".display-results").html(buildTheHtmlOutput);
 }
 
@@ -140,7 +144,7 @@ function populatePlannerContainer() {
 
 $(function () {
     populatePlannerContainer();
-
+    $('.results-field').hide();
 });
 
 //add activity to planner section

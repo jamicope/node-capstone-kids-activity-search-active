@@ -39,7 +39,8 @@ var getFromActive = function (activity, state) {
     var emitter = new events.EventEmitter();
 
     //    unirest.get("http: //api.amp.active.com/v2/search?topicName=Running&registerable_only=true&category=races&attributeValue=5k&sort=date_asc&per_page=24&near=" + searchTerm + ",US&radius=50&api_key=2e4ra5w6b9augfrn54vjb4bx")
-    unirest.get("http://api.amp.active.com/v2/search?topicName=" + activity + "&sort=date_asc&per_page=24&near=" + state + ",US&radius=50&kids=true&api_key=5jrdrb46x89e42e4vk94pgcv")
+
+    unirest.get("http://api.amp.active.com/v2/search?query=" + activity + "&sort=date_asc&per_page=24&near=" + state + ",US&radius=50&kids=true&api_key=5jrdrb46x89e42e4vk94pgcv")
         //    unirest.get("http://api.amp.active.com/v2/search?kids=true&api_key=5jrdrb46x89e42e4vk94pgcv")
         .header("Accept", "application/json")
         .end(function (result) {
