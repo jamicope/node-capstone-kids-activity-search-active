@@ -100,6 +100,7 @@
     }
     /* 12 columns, 12/12 */
     .col-12 {
-        width: 90%;
+        width: 94%;
+        text-align: center;
     }
 }
