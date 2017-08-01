@@ -2,13 +2,13 @@
 Thinkful node capstone for a kids' activity search based on an Active API
 
 
-![home page no results](https://www.github.com/jamicope/node-capstone-kids-activity-search-active/git_hub_images/home-page-no-results.png)
+![home page no results](https://github.com/jamicope/node-capstone-kids-activity-search-active/blob/master/git_hub_images/home-page-no-results.png)
 
 
-![home page with results](https://jamicope.github.io/node-capstone-find-and-register-for-events/git_hub_images/home-page-with-results.png)
+![home page with results](https://github.com/jamicope/node-capstone-kids-activity-search-active/blob/master/git_hub_images/home-page-with-results.png)
 
 
-![home page with planner](https://jamicope.github.io/node-capstone-find-and-register-for-events/git_hub_images/home-page-with-planner-active.png)
+![home page with planner](https://github.com/jamicope/node-capstone-kids-activity-search-active/blob/master/git_hub_images/home-page-with-planner-active.png)
 
 
 ## Background
