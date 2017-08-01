@@ -134,7 +134,7 @@ button:focus {
 }
 
 button:active {
-    background-color: whitesmoke;
+    background-color: whitesmoke !important;
 }
 
 .results-field {

@@ -69,7 +69,7 @@ describe('node-capstone-kids-activity-search-active', function () {
 
                         it('should delete an item on DELETE', function (done) {
                             chai.request(app)
-                                .delete('/delete-from-planner')
+                                .delete('/delete-planner')
                                 .end(function (err, res) {
                                     res.should.have.status(404);
                                     done();
