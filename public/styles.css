@@ -125,12 +125,16 @@ button {
     margin: 1rem auto;
 }
 
-button:hover {
+button.reset:hover {
     background-color: skyblue;
 }
 
 button:focus {
     outline: none;
+}
+
+button:active {
+    background-color: whitesmoke;
 }
 
 .results-field {
@@ -182,7 +186,7 @@ button:focus {
     float: left;
     position: absolute;
     left: 25px;
-    top: 65px;
+    top: 150px;
 }
 
 .planner-field:hover p.vertical-text {
@@ -240,6 +244,16 @@ a {
     border: none;
 }
 
+.addToPlannerButton:hover {
+    background-color: greenyellow;
+    border-radius: 28px;
+}
+
+.deleteFromPlannerButton:hover {
+    background-color: black;
+    border-radius: 28px;
+}
+
 .addToPlannerButton,
 .deleteFromPlannerButton,
 img {
@@ -264,12 +278,11 @@ footer {
     text-align: center;
     font-size: 14px;
     box-shadow: 5px 5px 5px #888888;
-    /*    display: inline-block;*/
     position: fixed;
     right: -160px;
     top: 105px;
     width: 200px;
-    height: 200px;
+    height: 400px;
     overflow-x: auto;
 }
 
