@@ -22,6 +22,10 @@ body {
     height: 100%;
 }
 
+body .orange {
+    text-align: center;
+}
+
 #container {
     min-height: 100%;
     position: relative;
@@ -171,7 +175,7 @@ button:active {
     right: -160px;
     top: 105px;
     width: 200px;
-    height: 800px;
+    height: 400px;
     overflow-x: auto;
 }
 

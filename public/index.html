@@ -17,6 +17,7 @@
                 <div class="row">
                     <div class="col-12 orange">
                         <h1>Local Activities for Kids</h1>
+                        <img src="images/power-by-active.png">
                     </div>
                 </div>
             </header>
@@ -27,8 +28,8 @@
                     <h2>Select the type of activity you are looking for:</h2>
 
                     <select name="activity" id="activity">
-                       <option value="" >Select an Activity</option>
-                        <option value="Team Sports" selected="selected">Team Sports</option>
+                        <option value="" selected="selected">Select an Activity</option>
+                        <option value="Team Sports">Team Sports</option>
                        <option value="Individual Sports">Individual Sports</option>
                        <option value="Youth Camps">Youth Camps</option>
                        <option value="ParksandRecreation">Parks and Recreation</option>
@@ -39,13 +40,14 @@
                        <option value="Outdoor Adventure">Outdoor Adventure</option>
                    </select>
 
-                    <input type="text" name="cityState" id="cityState" placeholder=" Enter your City, State--> ex.: Denver, CO" value="denver, CO">
+                    <input type="text" name="cityState" id="cityState" placeholder=" Enter your City, State--> ex.: Denver, CO">
                     <button class="reset" onClick="window.location.reload()">Reset Form</button>
                     <button id="submit" onClick="" class="reset">Search</button>
                 </form>
             </section>
             <section class="results col-12 results-field">
-                <p>Search Results</p>
+                <p class="results">Search Results</p>
+                <p class="instructions">Click on the plus sign to add an activity to your planner</p>
                 <ul class="display-results">
                 </ul>
             </section>

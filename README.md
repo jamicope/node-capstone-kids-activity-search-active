@@ -1,6 +1,16 @@
 # node-capstone-kids-activity-search-active
 Thinkful node capstone for a kids' activity search based on an Active API
 
+
+![home page no results](https://brandylavoy.github.io/node-capstone-find-and-register-for-events/git_hub_images/home-page-no-results.png)
+
+
+![home page with results](https://brandylavoy.github.io/node-capstone-find-and-register-for-events/git_hub_images/home-page-with-results.png)
+
+
+![home page with favorites](https://brandylavoy.github.io/node-capstone-find-and-register-for-events/git_hub_images/home-page-with-favorites.png)
+
+
 ## Background
 
 I built this app to help parents have one source to find different types of local activities for children in their area, and be able to combine them in one place to make scheduling easier.
@@ -36,7 +46,7 @@ Search for children's activities, based on user preference of activity & city.
 
 This is v1.0 of the app, but future enhancements are expected to include:
 
-* The ability to choose multip[le activities at one time 
+* The ability to choose multip[le activities at one time
 * The ability to increase or decrease the search radius
 * The ability to print the activities added to "My Planner"
 * Multiple pages of results
