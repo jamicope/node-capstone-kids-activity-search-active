@@ -2,7 +2,7 @@
 //take user input to find matching activities
 
 $("#criteria").submit(function (event) {
-    //if the page refreshes when you submit the form use "preventDefault()" to force JavaScript to handle the form submission
+
     event.preventDefault();
     var userActivity = $("#activity").val();
     var userState = $("#cityState").val();
@@ -14,7 +14,6 @@ $("#criteria").submit(function (event) {
     } else if (userActivity === "") {
         alert("Please select an activity")
     } else {
-        // console.log(userInput);
         ajaxSearch(userActivity, userState);
     }
 
