@@ -7,7 +7,7 @@
 }
 
 html {
-    font-family: "Karla", Arial, sans-serif;
+    font-family: Arial, sans-serif;
     background: rgba(0, 0, 0, 0) url("../images/kids-running-2.jpeg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -90,7 +90,7 @@ header {
 header h1 {
     display: block;
     text-align: center;
-    text-shadow: 2px 2px 4px white;
+    text-shadow: 1px 1px 2px white;
     padding: 0.5rem;
     font-size: 64px;
     font-weight: 1600;
@@ -100,9 +100,8 @@ section.user-input {
     font-size: 16px;
     border-radius: 7px;
     border: 0.5px solid grey;
-    background-color: white;
+    background: rgba(255, 255, 255, 0.3);
     line-height: 2;
-    box-shadow: 5px 5px 5px #888888;
     text-align: center;
     margin-top: 0.5rem;
 }
@@ -125,6 +124,7 @@ form select#activity {
 
 form input#cityState {
     margin-top: 1rem;
+    padding-left: .5rem;
 }
 
 button {
@@ -158,12 +158,11 @@ button:active {
     padding: 1rem;
     text-align: center;
     font-size: 14px;
-    box-shadow: 5px 5px 5px #888888;
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .display-results,
 .planner-results {
-    background-color: white;
     margin: 0.5%;
     padding: 0.5%;
     border-radius: 5px;
@@ -172,19 +171,19 @@ button:active {
 .planner-field {
     border-radius: 7px;
     border: 0.5px solid grey;
-    background-color: black;
+    background-color: white;
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding: 1rem 3rem;
     text-align: center;
     font-size: 14px;
-    box-shadow: 5px 5px 5px #888888;
     position: fixed;
     right: -160px;
     top: 105px;
     width: 200px;
     height: 400px;
     overflow-x: auto;
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .planner-field:hover {
@@ -281,27 +280,5 @@ footer {
     vertical-align: bottom;
     font-size: 24px;
     color: whitesmoke;
-}
-
-.planner-field {
-    border-radius: 7px;
-    border: 0.5px solid grey;
-    background-color: white;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding: 1rem 3rem;
     text-align: center;
-    font-size: 14px;
-    box-shadow: 5px 5px 5px #888888;
-    position: fixed;
-    right: -160px;
-    top: 105px;
-    width: 200px;
-    height: 400px;
-    overflow-x: auto;
-}
-
-.planner-field:hover {
-    right: -2px;
-    padding: 1rem;
 }
