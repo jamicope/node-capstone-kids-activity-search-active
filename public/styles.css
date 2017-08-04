@@ -3,12 +3,13 @@
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
+    border-radius: 0;
     /*border: 1px solid grey;*/
 }
 
 html {
-    font-family: Arial, sans-serif;
-    background: rgba(0, 0, 0, 0) url("../images/kids-running-2.jpeg") no-repeat center center fixed;
+    font-family: "Karla", Arial, sans-serif;
+    background: rgba(0, 0, 0, 0) url("../images/kids-running.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -63,7 +64,7 @@ li {
     background-color: lightskyblue;
     margin: 0.5%;
     padding: 0.5%;
-    border-radius: 7px;
+    border-radius: 2px;
     display: inline-block;
     position: relative;
 }
@@ -98,9 +99,9 @@ header h1 {
 
 section.user-input {
     font-size: 16px;
-    border-radius: 7px;
+    border-radius: 2px;
     border: 0.5px solid grey;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.5);
     line-height: 2;
     text-align: center;
     margin-top: 0.5rem;
@@ -118,8 +119,7 @@ form select#activity {
     height: 2.5rem;
     font-size: 14px;
     border: 1px solid grey;
-    border-radius: 3px;
-    padding: 1rem;
+    padding: .5rem;
 }
 
 form input#cityState {
@@ -131,14 +131,13 @@ button {
     width: 25%;
     height: 2.5rem;
     border: 1px solid grey;
-    border-radius: 3px;
     font-size: 16px;
     padding: 1rem auto;
     margin: 1rem auto;
 }
 
 button.reset:hover {
-    background-color: skyblue;
+    background: rgba(28, 102, 231, 0.3);
 }
 
 button:focus {
@@ -150,7 +149,7 @@ button:active {
 }
 
 .results-field {
-    border-radius: 7px;
+    border-radius: 2px;
     border: 0.5px solid grey;
     background-color: white;
     margin-top: 1rem;
@@ -158,51 +157,65 @@ button:active {
     padding: 1rem;
     text-align: center;
     font-size: 14px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .display-results,
 .planner-results {
     margin: 0.5%;
     padding: 0.5%;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 .planner-field {
-    border-radius: 7px;
-    border: 0.5px solid grey;
-    background-color: white;
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding: 1rem 3rem;
     text-align: center;
     font-size: 14px;
     position: fixed;
-    right: -160px;
-    top: 105px;
-    width: 200px;
-    height: 400px;
-    overflow-x: auto;
-    background: rgba(255, 255, 255, 0.3);
+    top: 120px;
+    right: 0;
 }
 
-.planner-field:hover {
-    right: -2px;
-    padding: 1rem;
-}
-
-.planner-field p.vertical-text {
+.planner-field div.vertical-text {
     transform: rotate(90deg);
     transform-origin: left top 1px;
     float: left;
     position: absolute;
-    left: 25px;
-    top: 150px;
+    right: -152px;
+    top: -1px;
     font-size: 18px;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 10px;
+    z-index: 1000;
+    height: 40px;
+    width: 150px;
+    border-left: 0.5px solid grey;
+    border-right: 0.5px solid grey;
+    border-bottom: 0.5px solid grey;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
-.planner-field:hover p.vertical-text {
-    display: none
+.planner-results {
+    position: fixed;
+    right: -204px;
+    top: 131px;
+    width: 200px;
+    height: 400px;
+    overflow-x: auto;
+    background: rgba(255, 255, 255, 0.75);
+    border: 0.5px solid grey;
+}
+
+.planner-field:hover .planner-results {
+    right: 1px;
+    padding: 1rem;
+}
+
+.planner-field:hover div.vertical-text {
+    right: 54px;
 }
 
 .auto-populated-description {
