@@ -23,6 +23,10 @@ body {
     height: 100%;
 }
 
+header {
+    margin-bottom: 1rem;
+}
+
 body .orange {
     text-align: center;
 }
@@ -60,8 +64,6 @@ body .orange {
 
 .sports,
 .camping {
-    /*    border: 1px solid black;*/
-    /*    height: 250px;*/
     margin-bottom: 1rem;
 }
 
@@ -237,7 +239,7 @@ button:active {
     padding: 0;
     text-align: center;
     font-size: 14px;
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.5);
     border: 0.5px solid grey;
 }
 
