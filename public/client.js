@@ -73,12 +73,12 @@ function displaySearchData(dataMatches) {
             buildTheHtmlOutput += '<h4><a target="_blank" href="' + dataMatchesValue.registrationUrlAdr + '" >' + dataMatchesValue.assetName + '</a></h4>';
         }
 
-        var showDistance = dataMatchesValue.assetAttributes[0];
-        if (showDistance === undefined) {
-            buildTheHtmlOutput += "";
-        } else {
-            buildTheHtmlOutput += '<p class="event">' + dataMatchesValue.assetAttributes[0].attribute.attributeValue + '</p>';
-        }
+//        var showDistance = dataMatchesValue.assetAttributes[0];
+//        if (showDistance === undefined) {
+//            buildTheHtmlOutput += "";
+//        } else {
+//            buildTheHtmlOutput += '<p class="event">' + dataMatchesValue.assetAttributes[0].attribute.attributeValue + '</p>';
+//        }
 
         buildTheHtmlOutput += '<p class="city">' + dataMatchesValue.place.cityName + '</p>';
 
