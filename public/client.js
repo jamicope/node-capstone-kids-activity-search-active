@@ -41,6 +41,10 @@ function ajaxSearch(activity, state) {
         });
 }
 
+$(function () {
+    ajaxSearch();
+    $('planner-field').hide();
+})
 
 //Step 2
 //return results to 'search results' container
@@ -111,7 +115,7 @@ function populatePlannerContainer() {
             var buildTheHtmlOutput = "";
 
             $.each(dataOutput, function (dataOutputKey, dataOutputValue) {
-                buildTheHtmlOutput += "<li class='planner'>";
+                buildTheHtmlOutput += "<li class='planner col-4'>";
                 buildTheHtmlOutput += "<div class='deleteFromPlanner'>";
                 buildTheHtmlOutput += "<form class='deleteFromPlannerValue'>";
                 buildTheHtmlOutput += "<input type='hidden' class='deleteFromPlannerValueInput' value='" + dataOutputValue._id + "'>";
@@ -132,6 +136,7 @@ function populatePlannerContainer() {
 
                 console.log(dataOutput);
             });
+            $(".planner-field").show();
             $(".planner-results").html(buildTheHtmlOutput);
         })
         .fail(function (jqXHR, error, errorThrown) {
@@ -145,6 +150,7 @@ $(function () {
     populatePlannerContainer();
     $('.results-field').hide();
 });
+
 
 //add activity to planner section
 

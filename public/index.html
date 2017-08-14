@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
 </head>
 
-
 <body>
     <div id="container">
         <div id="header">
@@ -22,54 +21,35 @@
                 </div>
             </header>
         </div>
-        <div id="body" class="row">
-            <section id="userInput" class="user-input col-12">
-                <form id="criteria" class="search-criteria">
-                    <h2>Select the type of activity you are looking for:</h2>
+        <div id="body" class="row landing-page-background">
+            <div class="sports col-6">
 
-                    <select name="activity" id="activity">
-                        <option value="" selected="selected">Select an Activity</option>
-                        <option value="Team Sports">Team Sports</option>
-                       <option value="Individual Sports">Individual Sports</option>
-                       <option value="Youth Camps">Youth Camps</option>
-                       <option value="ParksandRecreation">Parks and Recreation</option>
-                       <option value="Cheer and Dance">Cheer and Dance</option>
-                       <option value="Martial Arts">Martial Arts</option>
-                       <option value="Music">Music</option>
-                       <option value="Classes">Classes</option>
-                       <option value="Outdoor Adventure">Outdoor Adventure</option>
-                   </select>
+                <img class="lp-image" src="images/kids-sports.png">
+            </div>
+            <div class="sports col-6">
+                <p>Whether you're looking for team or individual sports, classes, martial arts, or outdoor activities, you've come to the right place!</p>
+            </div>
+            <div class="camping col-6">
+                <p>Click the GO button below to begin your search for the perfect activities for your kids! When you find activities your kids would love to join, add them to your planner, and see it all in one place!</p>
+            </div>
+            <div class="camping col-6">
+                <img class="lp-tent-image" src="images/camping.png">
+            </div>
 
-                    <input type="text" name="cityState" id="cityState" placeholder=" Enter your City, State--> ex.: Denver, CO">
-                    <button class="reset" onClick="window.location.reload()">Reset Form</button>
-                    <button id="submit" onClick="" class="reset">Search</button>
-                </form>
-            </section>
-            <section class="results col-12 results-field">
-                <p class="results">Search Results</p>
-                <p class="instructions">Click on the plus sign to add an activity to your planner</p>
-                <ul class="display-results">
-                </ul>
-            </section>
+            <div class="lower-screen">
+                <h2>
+
+                </h2>
+            </div>
         </div>
-        <div class="planner-field">
-            <div class="vertical-text">My Planner</div>
-            <ul class="planner-results" id="plannerResults">
-
-            </ul>
+        <div class="enter">
+            <a class="enter-here" href="activity-search.html">Go</a>
         </div>
         <div id="footer">
             <footer class="info">
-                <!--
-                <div class="row">
 
-                    <div class="col-12 blue">
--->
                 <h6>Created by Jami Cope</h6>
-                <!--
-</div>
-</div>
--->
+
             </footer>
         </div>
     </div>
@@ -77,6 +57,5 @@
     <script type="text/javascript" src="client.js"></script>
 
 </body>
-
 
 </html>

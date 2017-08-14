@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Local Activities for Kids</title>
+    <link rel="stylesheet" href="float-grid.css" type="text/css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+</head>
+
+
+<body>
+    <div id="container">
+        <div id="header">
+            <header>
+                <div class="row">
+                    <div class="col-12 orange">
+                        <h1>Local Activities for Kids</h1>
+                        <img src="images/power-by-active.png">
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div id="body" class="row">
+            <section id="userInput" class="user-input col-12">
+                <form id="criteria" class="search-criteria">
+                    <h2>Select the type of activity you are looking for:</h2>
+
+                    <select name="activity" id="activity" required>
+                        <option value="" selected="selected">Select an Activity</option>
+                        <option value="Team Sports">Team Sports</option>
+                       <option value="Individual Sports">Individual Sports</option>
+                       <option value="Youth Camps">Youth Camps</option>
+                       <option value="ParksandRecreation">Parks and Recreation</option>
+                       <option value="Cheer and Dance">Cheer and Dance</option>
+                       <option value="Martial Arts">Martial Arts</option>
+                       <option value="Music">Music</option>
+                       <option value="Classes">Classes</option>
+                       <option value="Outdoor Adventure">Outdoor Adventure</option>
+                   </select>
+
+                    <input type="text" name="cityState" id="cityState" placeholder=" Enter your City, State--> ex.: Denver, CO" required>
+                    <button class="reset" onClick="window.location.reload()">Reset Form</button>
+                    <button id="submit" onClick="" class="reset">Search</button>
+                </form>
+            </section>
+            <section class="planner-field col-12">
+                <a name="planner"></a>
+                <div class="vertical-text">
+                    <a href="#planner">My Planner</a></div>
+                <ul class="planner-results" id="plannerResults">
+
+                </ul>
+            </section>
+            <section class="results col-12 results-field">
+                <p class="results">Search Results</p>
+                <p class="instructions">Click on the plus sign to add an activity to your planner</p>
+                <ul class="display-results">
+                </ul>
+            </section>
+        </div>
+
+        <div id="footer">
+            <footer class="info">
+
+                <h6>Created by Jami Cope</h6>
+
+            </footer>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="client.js"></script>
+
+</body>
+
+
+</html>

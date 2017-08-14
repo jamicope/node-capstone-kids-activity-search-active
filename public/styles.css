@@ -41,11 +41,55 @@ body .orange {
     padding-bottom: 100px;
 }
 
+.landing-page-background {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 5rem auto;
+    padding: 0.5%;
+    border-radius: 2px;
+    border: 1px solid black;
+    height: 600px;
+    text-align: center;
+}
+
+.lp-image {
+    height: 250px;
+}
+
+.lp-tent-image {
+    height: 300px;
+}
+
+.sports,
+.camping {
+    /*    border: 1px solid black;*/
+    height: 250px;
+    margin-bottom: 1rem;
+}
+
+.sports p,
+.camping p {
+    margin: .5rem auto;
+    padding: .5rem auto;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 24px;
+}
+
+.sports,
+.sports p {
+    padding-top: 25px;
+}
+
+.camping,
+.camping p {
+    padding-top: 15px;
+}
+
 #footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 120px;
+    height: 25px;
 }
 
 p.results {
@@ -75,10 +119,11 @@ li.activities {
 }
 
 li.planner {
-    width: 100%;
+    /* width: 100%; */
     padding-top: 1rem;
     margin-top: .5rem;
     vertical-align: top;
+    height: 130px;
 }
 
 header {
@@ -169,21 +214,18 @@ button:active {
 .planner-field {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    padding: 1rem 3rem;
+    padding: 0;
     text-align: center;
     font-size: 14px;
-    position: fixed;
-    top: 120px;
-    right: 0;
 }
 
 .planner-field div.vertical-text {
     transform: rotate(90deg);
     transform-origin: left top 1px;
     float: left;
-    position: absolute;
+    position: fixed;
     right: -152px;
-    top: -1px;
+    top: 100px;
     font-size: 18px;
     background: rgba(255, 255, 255, 0.75);
     padding: 10px;
@@ -197,24 +239,14 @@ button:active {
     border-bottom-right-radius: 4px;
 }
 
+.planner-field div.vertical-text a {
+    color: black;
+}
+
 .planner-results {
-    position: fixed;
-    right: -204px;
-    top: 131px;
-    width: 200px;
-    height: 400px;
     overflow-x: auto;
     background: rgba(255, 255, 255, 0.75);
     border: 0.5px solid grey;
-}
-
-.planner-field:hover .planner-results {
-    right: 1px;
-    padding: 1rem;
-}
-
-.planner-field:hover div.vertical-text {
-    right: 54px;
 }
 
 .auto-populated-description {
@@ -284,6 +316,23 @@ img {
     height: 21px;
     text-align: right;
     background: transparent;
+}
+
+.enter {
+    margin: 5rem auto;
+    padding: 0.5%;
+    width: 150px;
+    text-align: center;
+}
+
+a.enter-here {
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    padding: 10px 60px;
+    width: 150px;
+    border-radius: 2px;
+    border: 1px solid black;
+    font-size: 24px;
 }
 
 footer {
