@@ -1,3 +1,8 @@
+/*---------------------------------------------------
+Part 1 - define functions, objects and variables
+---------------------------------------------------*/
+
+
 //Step 1
 //take user input to find matching activities
 
@@ -28,23 +33,17 @@ function ajaxSearch(activity, state) {
         })
         .done(function (dataResults) {
             console.log(dataResults);
-            if (dataResults.total_results == 0) {
-                alert("No results found!");
-            } else {
-                displaySearchData(dataResults.results);
-            }
+            displaySearchData(dataResults.results);
         })
         .fail(function (jqXHR, error, errorThrown) {
+            errorReporting("The City / State name is not valid");
             console.log(jqXHR);
             console.log(error);
             console.log(errorThrown);
         });
 }
 
-$(function () {
-    ajaxSearch();
-    $('planner-field').hide();
-})
+
 
 //Step 2
 //return results to 'search results' container
@@ -112,32 +111,38 @@ function populatePlannerContainer() {
         .done(function (dataOutput) {
             console.log(dataOutput);
 
-            var buildTheHtmlOutput = "";
+            //only show the container and results if the dataOutput is not empty
+            if (dataOutput.length != 0) {
 
-            $.each(dataOutput, function (dataOutputKey, dataOutputValue) {
-                buildTheHtmlOutput += "<li class='planner col-4'>";
-                buildTheHtmlOutput += "<div class='deleteFromPlanner'>";
-                buildTheHtmlOutput += "<form class='deleteFromPlannerValue'>";
-                buildTheHtmlOutput += "<input type='hidden' class='deleteFromPlannerValueInput' value='" + dataOutputValue._id + "'>";
-                buildTheHtmlOutput += "<button type='submit' class='deleteFromPlannerButton'>";
-                buildTheHtmlOutput += "<img src='/images/circle-delete-from-planner.png' class='delete-from-planner-icon'>";
-                buildTheHtmlOutput += "</button>";
-                buildTheHtmlOutput += "</form>";
-                buildTheHtmlOutput += "</div>";
-                buildTheHtmlOutput += '<h4><a target="_blank" href="' + dataOutputValue.url + '" >' + dataOutputValue.name + '</a></h4>';
-                var showCity = dataOutputValue.place;
-                if ((showCity === undefined) || (showCity == "undefined")) {
-                    buildTheHtmlOutput += "";
-                } else {
-                    buildTheHtmlOutput += '<p>' + showCity + '<p>'
-                }
-                buildTheHtmlOutput += '<p>' + dataOutputValue.date + '</p>'
-                buildTheHtmlOutput += "</li>"
+                var buildTheHtmlOutput = "";
 
-                console.log(dataOutput);
-            });
-            $(".planner-field").show();
-            $(".planner-results").html(buildTheHtmlOutput);
+                $.each(dataOutput, function (dataOutputKey, dataOutputValue) {
+                    buildTheHtmlOutput += "<li class='planner col-4'>";
+                    buildTheHtmlOutput += "<div class='deleteFromPlanner'>";
+                    buildTheHtmlOutput += "<form class='deleteFromPlannerValue'>";
+                    buildTheHtmlOutput += "<input type='hidden' class='deleteFromPlannerValueInput' value='" + dataOutputValue._id + "'>";
+                    buildTheHtmlOutput += "<button type='submit' class='deleteFromPlannerButton'>";
+                    buildTheHtmlOutput += "<img src='/images/circle-delete-from-planner.png' class='delete-from-planner-icon'>";
+                    buildTheHtmlOutput += "</button>";
+                    buildTheHtmlOutput += "</form>";
+                    buildTheHtmlOutput += "</div>";
+                    buildTheHtmlOutput += '<h4><a target="_blank" href="' + dataOutputValue.url + '" >' + dataOutputValue.name + '</a></h4>';
+                    var showCity = dataOutputValue.place;
+                    if ((showCity === undefined) || (showCity == "undefined")) {
+                        buildTheHtmlOutput += "";
+                    } else {
+                        buildTheHtmlOutput += '<p>' + showCity + '<p>'
+                    }
+                    buildTheHtmlOutput += '<p>' + dataOutputValue.date + '</p>'
+                    buildTheHtmlOutput += "</li>"
+
+                    console.log(dataOutput);
+                });
+                $(".planner-field").show();
+                $(".planner-results").html(buildTheHtmlOutput);
+            } else {
+                $(".planner-field").hide();
+            }
         })
         .fail(function (jqXHR, error, errorThrown) {
             console.log(jqXHR);
@@ -146,11 +151,29 @@ function populatePlannerContainer() {
         });
 }
 
-$(function () {
-    populatePlannerContainer();
-    $('.results-field').hide();
-});
+function errorReporting(message) {
+    $('.error-reporting').html("<div>" + message + "</div>");
+    $('.error-reporting').fadeIn(800).delay(6000).fadeOut(800);
+    //    $('.error-reporting').show();
+}
 
+
+
+
+
+/*---------------------------------------------------
+Part 2 - use functions, objects and variables (jquery triggers)
+---------------------------------------------------*/
+
+
+//when the page loads ... do stuff
+$(function () {
+
+    populatePlannerContainer();
+    //    $('.error-reporting').hide();
+    $('.results-field').hide();
+    $('.planner-field').hide();
+});
 
 //add activity to planner section
 
